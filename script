@@ -1,7 +1,6 @@
 #!/bin/bash
-#sudo apt-get install memtester
-#sudo apt-get install stress
-#sudo apt install lm-sensors
+
+source update
 
 echo "insira a PI:"
 read pi

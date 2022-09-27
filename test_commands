@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+ cd Downloads/
+ tar xvf systemback-install_pack-1.9.3.tar.xz
+ cd systemback-install_pack-1.9.3/
+ sudo apt-get install unionfs-fuse live-boot
+ sudo apt-get install grub2-common grub-efi-amd64-bin grub-pc-bin
+ sudo ./install.sh
+ sudo apt-get install -f 
+
+clear
+echo "
+§===========================§
+ #Comando rodado com sucesso
+ Aperte enter para continuar
+§===========================§
+"
+read
+clear
