@@ -1,8 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Type=Application
-Name=Update
-Comment=updating
-Exec=/home/joao/appzooom/update.sh
-StartupNotify=false
-Terminal=false
