@@ -1,0 +1,113 @@
+#!/bin/bash
+echo ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+echo ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿
+echo ⣿⠤⠄⠄⠙⢿⣿⣿⣿⡿⠿⠛⠛⢛⣧⣿⠇⠄⠂⠄⠄⠄⠘⣿⣿⣿⣿⠁⠄⢻
+echo ⣿⣿⣿⣿⣶⣄⣾⣿⢟⣼⠒⢲⡔⣺⣿⣧⠄⠄⣠⠤⢤⡀⠄⠟⠉⣠⣤⣤⣤⣾
+echo ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣀⣬⣵⣿⣿⣿⣶⡤⠙⠄⠘⠃⠄⣴⣾⣿⣿⣿⣿⣿
+echo ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢻⠿⢿⣿⣿⠿⠋⠁⠄⠂⠉⠒⢘⣿⣿⣿⣿⣿⣿⣿
+echo ⣿⣿⣿⣿⣿⣿⣿⣿⡿⣡⣷⣶⣤⣤⣀⡀⠄⠄⠄⠄⠄⠄⠄⣾⣿⣿⣿⣿⣿⣿
+echo ⣿⣿⣿⣿⣿⣿⣿⡿⣸⣿⣿⣿⣿⣿⣿⣿⣷⣦⣰⠄⠄⠄⠄⢾⠿⢿⣿⣿⣿⣿
+echo ⣿⡿⠋⣡⣾⣿⣿⣿⡟⠉⠉⠈⠉⠉⠉⠉⠉⠄⠄⠄⠑⠄⠄⠐⡇⠄⠈⠙⠛⠋
+echo ⠋⠄⣾⣿⣿⣿⣿⡿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢠⡇⠄⠄⠄⠄⠄
+echo ⠄⢸⣿⣿⣿⣿⣿⣯⠄⢠⡀⠄⠄⠄⠄⠄⠄⠄⠄⣀⠄⠄⠄⠄⠁⠄⠄⠄⠄⠄
+echo ⠁⢸⣿⣿⣿⣿⣿⣯⣧⣬⣿⣤⣐⣂⣄⣀⣠⡴⠖⠈⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+echo ⠈⠈⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣽⣉⡉⠉⠈⠁⠄⠁⠄⠄⠄⠄⡂⠄⠄⠄⠄⠄
+echo ⠄⠄⠙⣿⣿⠿⣿⣿⣿⣿⣷⡤⠈⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠠⠔⠄⠄⠄⠄⠄
+echo ⠄⠄⠄⡈⢿⣷⣿⣿⢿⣿⣿⣷⡦⢤⡀⠄⠄⠄⠄⠄⠄⢐⣠⡿⠁⠄⠄⠄⠄⠄
+
+
+sleep 1
+clear
+
+echo "
+§===========§
+ FULL UPDATE
+§===========§
+"
+sudo apt update && sudo  apt full-upgrade -s
+clear
+
+echo "
+§=======§
+ UPDATED
+§=======§
+"
+sleep 1
+clear
+
+echo "
+			================
+			INSTALANDO CUBIC
+			================
+"	 
+sudo apt-add-repository ppa:cubic-wizard/release -s
+ 
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6494C6D6997C215E -s
+
+sudo apt update && sudo apt install cubic -s
+
+echo "
+			===============
+			CUBIC INSTALADO
+			===============
+"
+clear	
+
+echo "
+§====================§
+ INSTALANDO MEMTESTER
+§====================§
+"			
+sudo apt-get install memtester
+clear
+
+echo "
+§===================§
+ MEMTESTER INSTALADO
+§===================§	
+"
+
+sleep 1
+clear
+
+echo "
+§=====================§
+ INTALANDO STRESS TEST
+§=====================§
+"
+sudo apt-get install stress
+clear
+
+echo "
+§=====================§
+ STRESS TEST INSTALADO
+§=====================§
+"
+sleep 1
+clear
+
+echo "
+§=================§
+ INTALANDO PSENSOR
+§=================§
+"			
+sudo apt install psensor
+clear
+
+echo "
+§=================§
+ PSENSOR INSTALADO
+§=================§
+"
+
+sleep 
+clear
+
+echo "
+§===============================================§
+ APPS INTALADOS E SISTEMA ATUALIZADO COM SUCESSO
+§===============================================§
+"
+echo "PRECIONE QUALQUER TECLA PARA CONTINUAR"
+read
+clear
