@@ -1,94 +1,9 @@
 #!/bin/bash
-
-source update
-
-echo "insira a PI:"
-read pi
+git config --global user.email "joaofelipedarosa@gmail.com"
+git config --global user.name "JoaoFelipe-rosa"
 
 
-echo "
-=========================
-
-PI= $pi
-Testes Iniciados
-Inicio:
-`date +%d-%m-%y_%H:%M:%S`
-
-=========================
-">> ./Logs/$pi.txt
-
-#for i in 1 ;
-#	do
-#		echo "RODANDO"
-#	done
-echo "
-=========================
-Teste de Memoria Iniciado
-=========================
-"
-testSize=1MB
-iterations=1
-memtester $testSize $iterations
-
-echo "* APROVADO NO TESTE DE MEMàRIA *" >> ./Logs/$pi.txt
-
-echo "
-=========================
-Teste de Memoria completo
-=========================
-"
-sleep 3
-clear
-echo "
-=========================
-Iniciando Stress Test
-=========================
-"
-stress -c 4 -i 4 -m 2  -t 5s
-
-echo "* APROVADO NO TESTE DE STRESS *" >> ./Logs/$pi.txt
-
-echo "
-=========================
-Stress Test Comcluido
-=========================
-"
-sleep 3
-clear
-echo "
-=========================
-Iniciando Teste de WI-FI
-=========================
-"
-nmcli -f SSID,BARS dev wifi
-
-echo "* APROVADO NO TESTE DE WI-FI *" >> ./Logs/$pi.txt
-
-echo "
-=========================
-Teste de WI-FI concluido
-=========================
-"
-sleep 3
-clear
-echo "
-=========================
-PI= $pi 
-Testes Finalizados
-Final:   
-`date +%d-%m-%y_%H:%M:%S`
-=========================
-">> ./Logs/$pi.txt
-
-source ./interface
-sleep 1s
-clear
-
-
-zenity --info --text="
-Testes  da PI:$pi
-    Concluidos 
-"
+echo "Rodou"
 
 
 
