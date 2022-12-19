@@ -18,7 +18,7 @@ echo "
 clear
 
 echo "
-===========================
-Cubic Instalado Com Sucesso
-===========================
+		===========================
+		Cubic Instalado Com Sucesso
+		===========================
 "

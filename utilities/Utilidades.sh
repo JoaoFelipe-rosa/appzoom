@@ -111,7 +111,7 @@ Iniciando Stress Test
 =========================
 "
 stress -c 3 -i 4 -m 2  -t 5s
-
+stress-ng --cpu 8 --io 4 --vm 2 --vm-bytes 128M --fork 4 --timeout 10s
 echo "* APROVADO NO TESTE DE STRESS *" >> ./Logs/"$pi".txt
 
 echo "
