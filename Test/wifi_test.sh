@@ -1,16 +1,14 @@
 #!/bin/bash
-
 echo "
                     °°°°°°°°°°°°°°°°°
-                    Stress test start
+                     Wifi Test start
                     °°°°°°°°°°°°°°°°°
 "
-
-stress-ng --cpu "$(cpu)" --io "$(io)" --timeout "$(time)"
+nmcli -f SSID,BARS dev wifi
 
 echo "
                     °°°°°°°°°°°°°°°°°°
-                    Stress test finish
+                     Wifi Test finish
                     °°°°°°°°°°°°°°°°°°
 "
 sleep 1
