@@ -151,3 +151,25 @@ Testes  da PI:$pi
     Concluidos 
 "
 #--------------------------------------------------------------------------------
+
+#--------------------------------------------------------------------------------
+#Estrutura IF com verificação de root
+
+if [[ ${UID} -eq 0 ]]
+
+    then
+        echo "Você é root"
+        echo "quer dizer sim?"
+        echo "(s) para sim e (n) para não"
+        read -r resposta
+        
+        if  [[ ${resposta} = "s" ]]
+            then
+                echo "SIM"
+            else 
+                echo "NÃO"
+        fi
+    else
+        echo "Você não é root"
+fi
+#--------------------------------------------------------------------------------

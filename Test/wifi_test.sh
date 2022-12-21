@@ -1,14 +1,14 @@
 #!/bin/bash
+
 echo "
-                    °°°°°°°°°°°°°°°°°
-                     Wifi Test start
-                    °°°°°°°°°°°°°°°°°
+=========================
+Iniciando Teste de WI-FI
+=========================
 "
 nmcli -f SSID,BARS dev wifi
 
 echo "
-                    °°°°°°°°°°°°°°°°°°
-                     Wifi Test finish
-                    °°°°°°°°°°°°°°°°°°
+=========================
+Teste de WI-FI concluido
+=========================
 "
-sleep 1

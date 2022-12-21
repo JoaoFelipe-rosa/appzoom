@@ -1,29 +1,95 @@
 #!/bin/bash
+echo ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+echo ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿
+echo ⣿⠤⠄⠄⠙⢿⣿⣿⣿⡿⠿⠛⠛⢛⣧⣿⠇⠄⠂⠄⠄⠄⠘⣿⣿⣿⣿⠁⠄⢻
+echo ⣿⣿⣿⣿⣶⣄⣾⣿⢟⣼⠒⢲⡔⣺⣿⣧⠄⠄⣠⠤⢤⡀⠄⠟⠉⣠⣤⣤⣤⣾
+echo ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣀⣬⣵⣿⣿⣿⣶⡤⠙⠄⠘⠃⠄⣴⣾⣿⣿⣿⣿⣿
+echo ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢻⠿⢿⣿⣿⠿⠋⠁⠄⠂⠉⠒⢘⣿⣿⣿⣿⣿⣿⣿
+echo ⣿⣿⣿⣿⣿⣿⣿⣿⡿⣡⣷⣶⣤⣤⣀⡀⠄⠄⠄⠄⠄⠄⠄⣾⣿⣿⣿⣿⣿⣿
+echo ⣿⣿⣿⣿⣿⣿⣿⡿⣸⣿⣿⣿⣿⣿⣿⣿⣷⣦⣰⠄⠄⠄⠄⢾⠿⢿⣿⣿⣿⣿
+echo ⣿⡿⠋⣡⣾⣿⣿⣿⡟⠉⠉⠈⠉⠉⠉⠉⠉⠄⠄⠄⠑⠄⠄⠐⡇⠄⠈⠙⠛⠋
+echo ⠋⠄⣾⣿⣿⣿⣿⡿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢠⡇⠄⠄⠄⠄⠄
+echo ⠄⢸⣿⣿⣿⣿⣿⣯⠄⢠⡀⠄⠄⠄⠄⠄⠄⠄⠄⣀⠄⠄⠄⠄⠁⠄⠄⠄⠄⠄
+echo ⠁⢸⣿⣿⣿⣿⣿⣯⣧⣬⣿⣤⣐⣂⣄⣀⣠⡴⠖⠈⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+echo ⠈⠈⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣽⣉⡉⠉⠈⠁⠄⠁⠄⠄⠄⠄⡂⠄⠄⠄⠄⠄
+echo ⠄⠄⠙⣿⣿⠿⣿⣿⣿⣿⣷⡤⠈⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠠⠔⠄⠄⠄⠄⠄
+echo ⠄⠄⠄⡈⢿⣷⣿⣿⢿⣿⣿⣷⡦⢤⡀⠄⠄⠄⠄⠄⠄⢐⣠⡿⠁⠄⠄⠄⠄⠄
+
+
+sleep 1
+clear
+
 echo "
 §===========§
-    UPDATE
+ FULL UPDATE
 §===========§
 "
+sudo apt update && sudo  apt full-upgrade -s
+clear
 
-Senha=$(zenity --password)
-echo "($Senha)" | sudo su
+echo "
+§=======§
+ UPDATED
+§=======§
+"
+sleep 1
+clear
 
-(
-    echo "10"
-        sleep 0.1
-    echo "Updating sistem"
-        sudo apt update && sudo apt full-upgrade -s
-    echo "20"
-        sudo apt install psensor -s
-    echo "upgrading sistem"
-        sudo apt-get install memtester -s
-    echo "50"
-        sleep 0.1
-    echo "Instaling memteste"
-        sudo apt-get install stress-ng -s
-    echo "100"
-        sleep 0.1
-) | zenity --progress --title="RODANDO" \
-    --text="Atualizando e instalando programas" \
-    --percentage=0 --auto-close
-zenity --info --title="Shrek Update" --text="Sistema Atualizado com sucesso"
+echo "
+§====================§
+ INSTALANDO MEMTESTER
+§====================§
+"			
+sudo apt-get install memtester
+clear
+
+echo "
+§===================§
+ MEMTESTER INSTALADO
+§===================§	
+"
+
+sleep 1
+clear
+
+echo "
+§=====================§
+ INTALANDO STRESS TEST
+§=====================§
+"
+sudo apt-get install stress
+clear
+
+echo "
+§=====================§
+ STRESS TEST INSTALADO
+§=====================§
+"
+sleep 1
+clear
+
+echo "
+§=================§
+ INTALANDO PSENSOR
+§=================§
+"			
+sudo apt install psensor
+clear
+
+echo "
+§=================§
+ PSENSOR INSTALADO
+§=================§
+"
+
+sleep 
+clear
+
+echo "
+§===============================================§
+ APPS INTALADOS E SISTEMA ATUALIZADO COM SUCESSO
+§===============================================§
+"
+echo "PRECIONE QUALQUER TECLA PARA CONTINUAR"
+read -r 
+clear

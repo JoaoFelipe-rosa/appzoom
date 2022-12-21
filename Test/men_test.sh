@@ -2,9 +2,9 @@
 
 
 echo "
-                    °°°°°°°°°°°°°°°°°
-                    Memory test start
-                    °°°°°°°°°°°°°°°°°
+                    =====================
+                    Memory Teste Iniciado
+                    =====================
 "
 
 memtester $Mem_capacity $Mem_lops
@@ -12,9 +12,9 @@ memtester $Mem_capacity $Mem_lops
 
 
 echo "
-                    °°°°°°°°°°°°°°°°°°
-                    Memory test finish
-                    °°°°°°°°°°°°°°°°°°
+                    ========================
+                    Memory Teste Finalizados
+                    ========================
 "
 
 sleep 1
