@@ -3,44 +3,54 @@
 #19/12/2022
 #João Felipe da Rosa
 
+#Validação da PI da maquina
+source sn_check.sh
+
+while [[ $errlvl -eq 1 ]]
+    do
+    clear
+    source sn_check.sh 
+
+done
+
+echo "PI completa: ${SERIAL}"
+echo "Partnumber: ${SERIAL:0:8}"
+
+
 # Setando Variaveis primarias
     # Parametros Mentest
-        Mem_capacity=1MB
-        Mem_lops=5
+        Mem_capacity=1MB    #Capacidade da Memoria
+        Mem_lops=5          #Numero de loops
     
     # Parametros Stress test
-        time=1s         #tempo de teste 
-        cpu=5         #numero de cores
-        io=4            #numero de threds
-        #vm=2            #I don't know  
-        #vm_byts=128M    #I don't know
-        #fork=4          #I don't know
+        time=1s          #tempo de teste 
+        cpu=5            #numero de cores
+        io=4             #numero de threds
          
 echo "
+
       ================
       Testes Iniciados
       ================
+
 "
-sleep 1
+
+
 
 #TESTE DE MEMORIAS 
-    shellcheck -x source /home/joao/appzoom/Test/men_test.sh
+    source /home/joao/appzoom/Test/men_test.sh
 
 #TESTE DE STRESS
-    shellcheck -x source /home/joao/appzoom/Test/stress_test.sh
+    source /home/joao/appzoom/Test/stress_test.sh
 
 #TESTE DE WIFI
-    shellcheck -x source /home/joao/appzoom/Test/wifi_test.sh
-s
+    source /home/joao/appzoom/Test/wifi_test.sh
 
 
 
 echo "
-    ==================
-    Testes Finalizados
-    ==================
 
-      Precione Enter
+      ==================
+      Testes Finalizados
+      ==================
 "
-
-read -r

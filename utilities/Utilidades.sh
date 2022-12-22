@@ -30,7 +30,7 @@
   echo "100" ; sleep 0.1
   )| zenity --progress\
   	      --title="RODANDO"\
-  		  --text="Atualizando e instalando programas"\
+  		  --text="Rodando os Testes"\
   		  --percentage=0\
   		  --auto-close;  		  
   zenity --info --title="Shrek Update" --text="Sistema Atualizado com sucesso"
@@ -173,3 +173,65 @@ if [[ ${UID} -eq 0 ]]
         echo "Você não é root"
 fi
 #--------------------------------------------------------------------------------
+
+#--------------------------------------------------------------------------------
+# LOOP FOR
+
+for i in {A..Z}
+    do
+        echo "${i}"
+        
+done
+
+#--------------------------------------------------------------------------------
+
+#--------------------------------------------------------------------------------
+# While Loop
+numero=1
+
+while [[ ${numero} -le 15 ]]
+    do
+        echo "Esta na volta  de numero ${numero}"
+        sleep 0.5
+        ((numero++))
+done
+
+echo "o loop terminou"
+#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
+# Verifica se o numero é par ou não
+echo "Voce quer sair ?"
+echo "(S)SIM (N)NÃO"
+read -r resposta
+
+if [[ ${resposta} = s ]]
+    then
+        echo "Saindo do programa !"
+        sleep 0.5
+        clear
+    else
+        clear
+        echo "Escolha um numero"
+        read -r num
+        clear
+        if [[ $(($num%2)) -eq '0' ]]
+            then
+                echo "seu numero é par"
+            else
+                echo "seu numero é impar"
+        fi
+        sleep 2
+        clear
+        echo "Obrigado por participar"
+        echo "Precione ENTER para sair"
+        read -r
+        clear
+fi
+#--------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
+
+
+
+
+
+
