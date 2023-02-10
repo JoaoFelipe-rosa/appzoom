@@ -34,6 +34,13 @@ function finish {
 # =-= VARIABLES =-= #
 SERIAL="NOT_SET"
 ERRLVL_SERIAL=1
+# parametros memtest
+MEM_CAPACITY=1MB	#capacidade da memória
+MEM_LOOPS=5			#número de loops
+# parametros stress_test
+TIME=1s				#tempo de teste
+CPU=5				#numero de cores
+IO=4				#numero de threds
 # =-= MAIN =-= #
 trap finish exit
 # vVv main script code vVv
@@ -48,17 +55,6 @@ done
 echo "PI completa: ${SERIAL}"
 echo "Partnumber: ${SERIAL:0:8}"
 
-
-# Setando Variaveis primarias
-    # Parametros Mentest
-        Mem_capacity=1MB    #Capacidade da Memoria
-        Mem_lops=5          #Numero de loops
-    
-    # Parametros Stress test
-        time=1s          #tempo de teste 
-        cpu=5            #numero de cores
-        io=4             #numero de threds
-         
 echo "
 
       ================
@@ -66,19 +62,12 @@ echo "
       ================
 
 "
-
-
-
 #TESTE DE MEMORIAS 
     source test/mem_test.sh
-
 #TESTE DE STRESS
     source test/stress_test.sh
-
 #TESTE DE WIFI
     source test/wifi_test.sh
-
-
 
 echo "
 
