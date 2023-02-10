@@ -33,17 +33,16 @@ function finish {
 }
 # =-= VARIABLES =-= #
 SERIAL="NOT_SET"
-SERIAL_ERRLVL="NOT_SET"
+ERRLVL_SERIAL=1
 # =-= MAIN =-= #
 trap finish exit
 # vVv main script code vVv
 
 # validação da PI da maquina
-echo errlvl: ${errlvl}
-while [[ ${errlvl} -eq 1 ]]
-    do
-    clear
-    source check/sn_check.sh
+# ${ERRLVL_SERIAL} will be 0 when ${SERIAL} is a valid number
+while [[ ${ERRLVL_SERIAL} -ne 0 ]]
+	do
+	source check/sn_check.sh
 done
 
 echo "PI completa: ${SERIAL}"
