@@ -32,20 +32,16 @@ function finish {
 	exit 0
 }
 # =-= VARIABLES =-= #
-SERIAL="NOT_SET"
-ERRLVL_SERIAL=1
 source conf/kerhs.conf
 	# how to extract values from .conf file
 	# BLABLABLA=$(grep -e MEM_CAPACITY conf/kerhs.conf | cut -d "=" -f2)
 	# echo BLABLABLA: ${BLABLABLA}
 # =-= MAIN =-= #
 trap finish exit
-# vVv main script code vVv
-
+# vVv main script code vVv #
 # validação da PI da maquina
-# ${ERRLVL_SERIAL} will be 0 when ${SERIAL} is a valid number
-while [[ ${ERRLVL_SERIAL} -ne 0 ]]
-	do
+# ${ERRLVL_SERIAL}=0 when ${SERIAL} is valid
+while [[ ${ERRLVL_SERIAL} -ne 0 ]]; do
 	source check/sn_check.sh
 done
 
