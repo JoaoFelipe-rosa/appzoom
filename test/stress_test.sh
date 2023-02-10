@@ -1,16 +1,16 @@
 #!/bin/bash
 
 echo "
-                    =====================
-                    Stress Teste Iniciado
-                    =====================
+					=====================
+					Stress Teste Iniciado
+					=====================
 "
 
-stress-ng --cpu $cpu --io $io --timeout $time
+stress-ng --cpu $CPU --io $IO --timeout $TIME
 
 echo "
-                    ========================
-                    Stress Teste Finalizados
-                    ========================
+					========================
+					Stress Teste Finalizados
+					========================
 "
 sleep 1

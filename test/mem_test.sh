@@ -2,19 +2,19 @@
 
 
 echo "
-                    =====================
-                    Memory Teste Iniciado
-                    =====================
+					=====================
+					Memory Teste Iniciado
+					=====================
 "
 
-memtester $Mem_capacity $Mem_lops
+memtester $MEM_CAPACITY $MEM_LOOPS
 
 
 
 echo "
-                    ========================
-                    Memory Teste Finalizados
-                    ========================
+					========================
+					Memory Teste Finalizados
+					========================
 "
 
 sleep 1
