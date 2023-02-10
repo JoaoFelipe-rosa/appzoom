@@ -9,12 +9,12 @@ if [[ ${#SERIAL} -ne 16 ]]; then
 	PROBLEM="serial number inválido - deve possuir 16 dígitos"
 	echo ${PROBLEM}
 	ERRLVL_SERIAL=1
-fi
 # check if first 2 digits of ${SERIAL} is "PI"
-if [[ "${SERIAL:0:2}" != "PI" ]]; then
-	PROBLEM="serial number inválido"
+elif [[ "${SERIAL:0:2}" != "PI" ]]; then
+	PROBLEM="serial number inválido - deve iniciar com 'PI'"
 	echo ${PROBLEM}
 	ERRLVL_SERIAL=1
-fi
 # if ${SERIAL} passes all tests, it's a valid string
-ERRLVL_SERIAL=0
+else
+	ERRLVL_SERIAL=0
+fi
