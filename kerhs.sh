@@ -49,10 +49,6 @@ while [[ ${ERRLVL_SERIAL} -ne 0 ]]
 	source check/sn_check.sh
 done
 
-TEST=$(smartctl --scan)
-TEST=${TEST:0:8}
-echo "smartctl ${TEST}"
-
 echo "PI completa: ${SERIAL}"
 echo "Partnumber: ${SERIAL:0:8}"
 
