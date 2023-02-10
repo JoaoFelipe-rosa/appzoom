@@ -32,8 +32,8 @@ function finish {
 	exit 0
 }
 # =-= VARIABLES =-= #
-HI="sup"
 SERIAL="NOT_SET"
+SERIAL_ERRLVL="NOT_SET"
 # =-= MAIN =-= #
 trap finish exit
 # vVv main script code vVv
@@ -43,8 +43,7 @@ echo errlvl: ${errlvl}
 while [[ ${errlvl} -eq 1 ]]
     do
     clear
-    source check/sn_check.sh 
-
+    source check/sn_check.sh
 done
 
 echo "PI completa: ${SERIAL}"
