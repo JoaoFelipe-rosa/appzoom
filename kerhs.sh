@@ -33,18 +33,17 @@ function finish {
 }
 # =-= VARIABLES =-= #
 HI="sup"
-
+SERIAL="NOT_SET"
 # =-= MAIN =-= #
 trap finish exit
 # vVv main script code vVv
 
 # validação da PI da maquina
-source sn_check.sh
-
-while [[ $errlvl -eq 1 ]]
+echo errlvl: ${errlvl}
+while [[ ${errlvl} -eq 1 ]]
     do
     clear
-    source sn_check.sh 
+    source check/sn_check.sh 
 
 done
 
