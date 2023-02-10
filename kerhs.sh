@@ -34,13 +34,10 @@ function finish {
 # =-= VARIABLES =-= #
 SERIAL="NOT_SET"
 ERRLVL_SERIAL=1
-# parametros memtest
-MEM_CAPACITY=1MB	#capacidade da memória
-MEM_LOOPS=5			#número de loops
-# parametros stress_test
-TIME=1s				#tempo de teste
-CPU=5				#numero de cores
-IO=4				#numero de threds
+source conf/kerhs.conf
+	# extract values from .conf file
+	# BLABLABLA=$(grep -e MEM_CAPACITY conf/kerhs.conf | cut -d "=" -f2)
+	# echo BLABLABLA: ${BLABLABLA}
 # =-= MAIN =-= #
 trap finish exit
 # vVv main script code vVv
