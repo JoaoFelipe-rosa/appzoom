@@ -2,6 +2,17 @@
 #AppZoom
 #19/12/2022
 #João Felipe da Rosa
+#
+
+#       Dependencias
+#   * mentestet
+#   * stress-ng
+#   *
+#   *
+#   *
+
+
+
 
 #Validação da PI da maquina
 source sn_check.sh
@@ -38,13 +49,13 @@ echo "
 
 
 #TESTE DE MEMORIAS 
-    source /home/joao/appzoom/Test/men_test.sh
+    source test/men_test.sh
 
 #TESTE DE STRESS
-    source /home/joao/appzoom/Test/stress_test.sh
+    source test/stress_test.sh
 
 #TESTE DE WIFI
-    source /home/joao/appzoom/Test/wifi_test.sh
+    source test/wifi_test.sh
 
 
 
