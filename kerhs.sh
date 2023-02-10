@@ -35,7 +35,7 @@ function finish {
 SERIAL="NOT_SET"
 ERRLVL_SERIAL=1
 source conf/kerhs.conf
-	# extract values from .conf file
+	# how to extract values from .conf file
 	# BLABLABLA=$(grep -e MEM_CAPACITY conf/kerhs.conf | cut -d "=" -f2)
 	# echo BLABLABLA: ${BLABLABLA}
 # =-= MAIN =-= #
@@ -48,6 +48,10 @@ while [[ ${ERRLVL_SERIAL} -ne 0 ]]
 	do
 	source check/sn_check.sh
 done
+
+TEST=$(smartctl --scan)
+TEST=${TEST:0:8}
+echo "smartctl ${TEST}"
 
 echo "PI completa: ${SERIAL}"
 echo "Partnumber: ${SERIAL:0:8}"
