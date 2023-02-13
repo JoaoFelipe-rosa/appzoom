@@ -5,7 +5,7 @@ echo "
 Iniciando Teste de WI-FI
 =========================
 "
-nmcli -f SSID,BARS dev wifi
+nmcli -f SSID,BARS dev wifi 
 
 echo "
 =========================
