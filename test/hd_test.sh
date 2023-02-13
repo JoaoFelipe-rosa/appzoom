@@ -16,18 +16,28 @@ function finish {
 	#clean-up code goes here
 	exit 0
 }
-# =-= VARIABLES =-= #
-HI="sup"
-            
+
 # =-= MAIN =-= #
 trap finish exit
 # vVv main script co
 	DISK=$(smartctl --scan)
 	DISK=${DISK:0:8}
 
+#=-=-=-Check disk informations=-=-=-#
 
-#Check disk informations
-	sudo smartctl -i ${DISK} | grep -e Model | cut -d ":" -f2 | xargs
-	sudo smartctl -i ${DISK} | grep -e Capacity | cut -d ":" -f2 | cut -d "s" -f2 | xargs
-	sudo smartctl -i ${DISK} | grep -e sata | cut -d ":" -f2 | xargs
-#hdparm -t
+HDD_MODEL=$(sudo smartctl -i ${DISK} | grep -e Model | cut -d ":" -f2 | xargs)
+HDD_FIRMWARE=$(sudo smartctl -i ${DISK} | grep -e Firmware | cut -d ":" -f2 | xargs)
+HDD_CAPACITY=$(sudo smartctl -i ${DISK} | grep -e Capacity | cut -d "[" -f2 | cut -d "]" -f1)
+
+echo "
+	Modelo: ${HDD_MODEL}
+	Firmware: ${HDD_FIRMWARE}
+	Capacidade: ${HDD_CAPACITY}
+	"
+
+#=-=-=-Performs the hd test=-=-=-#
+ for i in 1; 
+ do 
+ 	sudo hdparm -tT ${DISK};
+ 	sudo hdparm -t --direct ${DISK}
+ 	done
