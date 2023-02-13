@@ -1,4 +1,6 @@
 #!/bin/bash
+# author: kevinkirst
+
 # ${ERRLVL_SERIAL}=0 -> valid ${SERIAL}
 # ${ERRLVL_SERIAL}=1 -> invalid ${SERIAL}
 # ${NUMERALS} -> integer interval imported from kerhs.conf
@@ -16,8 +18,8 @@ if [[ -z ${SERIAL} ]]; then
 	PROBLEM="serial number inválido - não deve ser vazio"
 	error
 # check if ${SERIAL} has 16 digits
-elif [[ ${#SERIAL} -ne 16 ]]; then
-	PROBLEM="serial number inválido - deve possuir 16 dígitos"
+elif [[ ${#SERIAL} -ne ${LENGTH_SERIAL} ]]; then
+	PROBLEM="serial number inválido - deve possuir ${LENGTH_SERIAL} dígitos"
 	error
 # check if first 2 digits of ${SERIAL} is "PI"
 elif [[ "${SERIAL:0:2}" != "PI" ]]; then
